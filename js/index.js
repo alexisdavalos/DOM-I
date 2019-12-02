@@ -1,5 +1,5 @@
 const siteContent = {
-  "nav": {
+  nav: {
     "nav-item-1": "Services",
     "nav-item-2": "Product",
     "nav-item-3": "Vision",
@@ -38,12 +38,15 @@ const siteContent = {
 };
 
 // Example: Update the img src for the logo
+console.log(siteContent.cta.h1)
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 //Set CTA SRC attribute
 let ctaImg = document.getElementById("cta-img");
 ctaImg.src = [siteContent["cta"]["img-src"]]
+
+//Line Breaks 
 
 //Populate nav links
 const Links = document.querySelectorAll('a');
@@ -74,6 +77,12 @@ ctaText.textContent = [siteContent["cta"]["h1"]];
 
 let ctaButton = document.querySelector(".cta-text button");
 ctaButton.textContent = [siteContent["cta"]["button"]];
+
+//Add CTA Button Event
+
+ctaButton.addEventListener('click', (event) => {
+  alert('You Did It!')
+})
 
 //Main Content
 let siteText = document.querySelectorAll('.text-content p')
@@ -109,4 +118,5 @@ contactParagraph[2].textContent = [siteContent["contact"]["email"]];
 
 let footerText = document.querySelector('footer p');
 footerText.textContent = [siteContent["footer"]["copyright"]]
+
 
