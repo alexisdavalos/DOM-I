@@ -43,15 +43,17 @@ logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 //Set CTA SRC attribute
 let ctaImg = document.getElementById("cta-img");
-ctaImg.setAttribute('src', siteContent["cta"]["img-src"])
+ctaImg.src = [siteContent["cta"]["img-src"]]
 
 //Populate nav links
-const Links = document.getElementsByTagName('a');
+const Links = document.querySelectorAll('a');
 
-Array.from(Links).forEach((link,index) => {
-  link.textContent = siteContent["nav"][`nav-item-${index}`];
+Links.forEach((link,index) => {
+  link.textContent = siteContent["nav"][`nav-item-${index+1}`];
 })
 
 //Add CTA Text
+let ctaText = document.querySelector(".cta-text h1");
+ctaText.textContent = [siteContent["cta"]["h1"]];
 
 
