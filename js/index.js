@@ -61,3 +61,14 @@ ctaText.textContent = [siteContent["cta"]["h1"]];
 let ctaButton = document.querySelector(".cta-text button");
 ctaButton.textContent = [siteContent["cta"]["button"]];
 
+//Main Content H4
+
+let siteh4 = document.querySelectorAll(".text-content h4");
+siteh4[0].textContent = [siteContent["main-content"]["features-h4"]];
+siteh4[1].textContent = [siteContent["main-content"]["about-h4"]];
+siteh4[2].textContent = [siteContent["main-content"]["services-h4"]];
+siteh4[3].textContent = [siteContent["main-content"]["product-h4"]];
+siteh4[4].textContent = [siteContent["main-content"]["vision-h4"]];
+
+
+
