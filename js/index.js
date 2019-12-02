@@ -61,6 +61,13 @@ ctaText.textContent = [siteContent["cta"]["h1"]];
 let ctaButton = document.querySelector(".cta-text button");
 ctaButton.textContent = [siteContent["cta"]["button"]];
 
+//Main Content
+let siteText = document.querySelectorAll('.text-content p')
+siteText[0].textContent = [siteContent["main-content"]["features-content"]];
+siteText[1].textContent = [siteContent["main-content"]["about-content"]];
+siteText[2].textContent = [siteContent["main-content"]["services-content"]];
+siteText[3].textContent = [siteContent["main-content"]["product-content"]];
+siteText[4].textContent = [siteContent["main-content"]["vision-content"]];
 //Main Content H4
 
 let siteh4 = document.querySelectorAll(".text-content h4");
@@ -75,5 +82,14 @@ siteh4[4].textContent = [siteContent["main-content"]["vision-h4"]];
 let middleImg = document.querySelector('.middle-img');
 middleImg.src = [siteContent["main-content"]["middle-img-src"]];
 
+//Contact
 
+let contactTitle = document.querySelector('.contact h4');
+let contactParagraph = document.querySelectorAll('.contact p');
+contactTitle.textContent = [siteContent["contact"]["contact-h4"]];
+contactParagraph[0].textContent = [siteContent["contact"]["address"]];
+contactParagraph[1].textContent = [siteContent["contact"]["phone"]];
+contactParagraph[2].textContent = [siteContent["contact"]["email"]];
+
+console.log(contactParagraph);
 
