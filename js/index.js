@@ -50,7 +50,21 @@ const Links = document.querySelectorAll('a');
 
 Links.forEach((link,index) => {
   link.textContent = siteContent["nav"][`nav-item-${index+1}`];
+  link.style.color = 'green';
 })
+
+//Create New Nav Items
+const navSelector = document.querySelector('nav');
+const newNavItem = document.createElement('a');
+const lastNavItem = document.createElement('a');
+newNavItem.href = "#";
+newNavItem.textContent = "First";
+newNavItem.style = "color:blue";
+lastNavItem.href="#";
+lastNavItem.style="color:red;";
+lastNavItem.textContent = "Last";
+navSelector.prepend(newNavItem);
+navSelector.append(lastNavItem);
 
 //Add CTA Text
 let ctaText = document.querySelector(".cta-text h1");
@@ -91,5 +105,8 @@ contactParagraph[0].textContent = [siteContent["contact"]["address"]];
 contactParagraph[1].textContent = [siteContent["contact"]["phone"]];
 contactParagraph[2].textContent = [siteContent["contact"]["email"]];
 
-console.log(contactParagraph);
+//Footer 
+
+let footerText = document.querySelector('footer p');
+footerText.textContent = [siteContent["footer"]["copyright"]]
 
