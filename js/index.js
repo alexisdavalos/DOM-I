@@ -70,5 +70,10 @@ siteh4[2].textContent = [siteContent["main-content"]["services-h4"]];
 siteh4[3].textContent = [siteContent["main-content"]["product-h4"]];
 siteh4[4].textContent = [siteContent["main-content"]["vision-h4"]];
 
+//Middle Img Src
+
+let middleImg = document.querySelector('.middle-img');
+middleImg.src = [siteContent["main-content"]["middle-img-src"]];
+
 
 
