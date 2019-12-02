@@ -56,4 +56,8 @@ Links.forEach((link,index) => {
 let ctaText = document.querySelector(".cta-text h1");
 ctaText.textContent = [siteContent["cta"]["h1"]];
 
+//Add CTA Button Text
+
+let ctaButton = document.querySelector(".cta-text button");
+ctaButton.textContent = [siteContent["cta"]["button"]];
 
