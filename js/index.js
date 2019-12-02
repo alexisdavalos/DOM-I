@@ -40,3 +40,18 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+//Set CTA SRC attribute
+let ctaImg = document.getElementById("cta-img");
+ctaImg.setAttribute('src', siteContent["cta"]["img-src"])
+
+//Populate nav links
+const Links = document.getElementsByTagName('a');
+
+Array.from(Links).forEach((link,index) => {
+  link.textContent = siteContent["nav"][`nav-item-${index}`];
+})
+
+//Add CTA Text
+
+
