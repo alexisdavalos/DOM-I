@@ -86,11 +86,11 @@ ctaButton.addEventListener('click', (event) => {
 
 //Main Content
 let siteText = document.querySelectorAll('.text-content p')
-siteText[0].textContent = [siteContent["main-content"]["features-content"]];
-siteText[1].textContent = [siteContent["main-content"]["about-content"]];
-siteText[2].textContent = [siteContent["main-content"]["services-content"]];
-siteText[3].textContent = [siteContent["main-content"]["product-content"]];
-siteText[4].textContent = [siteContent["main-content"]["vision-content"]];
+let siteType = ["features", "about", "services", "product", "vision"];
+siteText.forEach((item, index) =>{
+  siteText[index].textContent = [siteContent["main-content"][`${siteType[index]}-content`]];
+})
+
 //Main Content H4
 
 let siteh4 = document.querySelectorAll(".text-content h4");
