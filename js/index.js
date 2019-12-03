@@ -87,18 +87,27 @@ ctaButton.addEventListener('click', (event) => {
 //Main Content
 let siteText = document.querySelectorAll('.text-content p')
 let siteType = ["features", "about", "services", "product", "vision"];
+let siteContact = ["features", "about", "services", "product", "vision"];
 siteText.forEach((item, index) =>{
   siteText[index].textContent = [siteContent["main-content"][`${siteType[index]}-content`]];
 })
+// siteText[0].textContent = [siteContent["main-content"]["features-content"]];
+// siteText[1].textContent = [siteContent["main-content"]["about-content"]];
+// siteText[2].textContent = [siteContent["main-content"]["services-content"]];
+// siteText[3].textContent = [siteContent["main-content"]["product-content"]];
+// siteText[4].textContent = [siteContent["main-content"]["vision-content"]];
 
 //Main Content H4
 
 let siteh4 = document.querySelectorAll(".text-content h4");
-siteh4[0].textContent = [siteContent["main-content"]["features-h4"]];
-siteh4[1].textContent = [siteContent["main-content"]["about-h4"]];
-siteh4[2].textContent = [siteContent["main-content"]["services-h4"]];
-siteh4[3].textContent = [siteContent["main-content"]["product-h4"]];
-siteh4[4].textContent = [siteContent["main-content"]["vision-h4"]];
+siteText.forEach((item, index) =>{
+  siteh4[index].textContent = [siteContent["main-content"][`${siteType[index]}-h4`]];
+})
+// siteh4[0].textContent = [siteContent["main-content"]["features-h4"]];
+// siteh4[1].textContent = [siteContent["main-content"]["about-h4"]];
+// siteh4[2].textContent = [siteContent["main-content"]["services-h4"]];
+// siteh4[3].textContent = [siteContent["main-content"]["product-h4"]];
+// siteh4[4].textContent = [siteContent["main-content"]["vision-h4"]];
 
 //Middle Img Src
 
